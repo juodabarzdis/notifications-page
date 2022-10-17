@@ -81,6 +81,14 @@
   border-radius: 2px;
 }
 
+.notification__picture {
+  margin-left: auto;
+}
+
+.notification__picture img {
+  width: 50px;
+}
+
 .notification__message:hover {
   border: 1px solid var(--blue);
   background-color: var(--light-blue);

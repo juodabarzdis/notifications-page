@@ -60,7 +60,7 @@ const notifications = [
     notification_message: "",
     notification_associated: "",
     notification_associated_type: "picture",
-    notification_image: "images/chess-club.webp",
+    notification_image: "images/image-chess.webp",
     time: "1 week ago",
     isRed: true,
   },

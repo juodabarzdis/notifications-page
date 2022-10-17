@@ -22,6 +22,16 @@ const Notification = ({ data }) => {
     }
   };
 
+  const isImage = () => {
+    if (data.notification_image) {
+      return (
+        <div className="notification__picture">
+          <img src={data.notification_image} alt="image that was reacted" />
+        </div>
+      );
+    }
+  };
+
   return (
     <>
       <li className={`notification ${isRedStyle()}`}>
@@ -46,6 +56,7 @@ const Notification = ({ data }) => {
               <span>{data.time}</span>
             </div>
           </div>
+          {isImage()}
         </div>
         <div className="notification-additional">
           {data.notification_message !== "" && (
