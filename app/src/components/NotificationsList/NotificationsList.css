@@ -1,4 +1,61 @@
-.notifications-container {
-  width: 750px;
-  margin: 0 auto;
+.notifications-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 780px;
+  padding: 10px;
+  margin: 20px auto;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.notifications__information {
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  justify-content: space-between;
+}
+
+.notifications__list {
+  width: 100%;
+  list-style: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.notifications__information-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notifications__information-left .unread-notifications {
+  margin-left: 10px;
+  padding: 5px 12px;
+  border-radius: 5px;
+  font-weight: 800;
+  color: #fff;
+  background-color: var(--blue);
+}
+
+.text-btn {
+  color: var(--gray);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.text-btn:hover {
+  color: var(--blue);
+}
+
+@media (max-width: 550px) {
+  body {
+    background-color: #fff;
+  }
+  .notifications-wrapper {
+    margin: 0;
+  }
 }

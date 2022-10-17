@@ -2,8 +2,6 @@ import React from "react";
 import "./Notification.css";
 
 const Notification = ({ data }) => {
-  console.log(data);
-
   const classStyle = () => {
     if (data.notification_associated_type === "post") {
       return "notification__associated_type_post";
@@ -27,18 +25,33 @@ const Notification = ({ data }) => {
   return (
     <>
       <li className={`notification ${isRedStyle()}`}>
-        <div className="notification__user-image">
-          <img src={data.image} alt="avatar" />
+        <div className="notification-main">
+          <div className="notification__user-image">
+            <img src={data.image} alt="avatar" />
+          </div>
+          <div>
+            <span className="notification__user-name">
+              {data.first_name + " " + data.last_name + " "}
+            </span>
+            <span className="notification__notification-text">
+              {data.notification + " "}
+            </span>
+            {data.notification_associated !== "" && (
+              <span className={classStyle()}>
+                {data.notification_associated}
+              </span>
+            )}
+            {!data.isRed && <span className="notification__marker"></span>}
+            <div className="notification__time">
+              <span>{data.time}</span>
+            </div>
+          </div>
         </div>
-        <div>
-          <span className="notification__user-name">
-            {data.first_name + " " + data.last_name + " "}
-          </span>
-          <span className="notification__notification-text">
-            {data.notification + " "}
-          </span>
-          {data.notification_associated !== "" && (
-            <span className={classStyle()}>{data.notification_associated}</span>
+        <div className="notification-additional">
+          {data.notification_message !== "" && (
+            <div className="notification__message">
+              <span>{data.notification_message}</span>
+            </div>
           )}
         </div>
       </li>

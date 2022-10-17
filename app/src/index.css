@@ -1,7 +1,9 @@
 :root {
+  --light-blue: hsl(210, 60%, 98%);
   --blue: hsl(219, 85%, 26%);
   --light-gray: hsl(210, 60%, 98%);
   --gray: hsl(219, 12%, 42%);
+  --red: hsl(1, 90%, 64%);
 }
 
 * {
@@ -13,7 +15,11 @@ body {
   margin: 0;
   font-family: "Plus Jakarta Sans", sans-serif;
   font-size: 16px;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  line-height: normal;
+  background-color: var(--light-gray);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }

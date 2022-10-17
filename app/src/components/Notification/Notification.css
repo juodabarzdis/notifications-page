@@ -1,8 +1,14 @@
 .notification {
   display: flex;
+  flex-direction: column;
   margin: 10px;
   padding: 10px;
   border-radius: 10px;
+}
+
+.notification-main {
+  display: flex;
+  align-items: center;
 }
 
 .notification.notification__isRed {
@@ -21,10 +27,24 @@
 
 .notification__user-name {
   font-weight: 800;
+  cursor: pointer;
+}
+
+.notification__user-name:hover {
+  color: var(--blue);
 }
 
 .notification__notification-text {
   color: var(--gray);
+}
+
+.notification__marker {
+  display: inline-block;
+  margin-left: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--red);
 }
 
 .notification__associated_type_post {
@@ -32,7 +52,37 @@
   color: var(--gray);
 }
 
+.notification__associated_type_post:hover {
+  color: var(--blue);
+  cursor: pointer;
+}
+
 .notification__associated_type_group {
   font-weight: 800;
   color: var(--blue);
+  cursor: pointer;
+}
+
+.notification__associated_type_group:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.notification__time {
+  line-height: 1.5;
+  color: var(--gray);
+}
+
+.notification__message {
+  margin: 10px 0 10px 60px;
+  padding: 20px;
+  color: var(--gray);
+  border: 1px solid var(--gray);
+  border-radius: 2px;
+}
+
+.notification__message:hover {
+  border: 1px solid var(--blue);
+  background-color: var(--light-blue);
+  cursor: pointer;
 }

@@ -1,5 +1,6 @@
 import "./App.css";
 import NotificationsList from "./components/NotificationsList/NotificationsList";
+import { useState } from "react";
 
 const notifications = [
   {
@@ -90,9 +91,24 @@ const notifications = [
 ];
 
 function App() {
+  const [notificationList, setNotificationList] = useState(notifications);
+  const [unreadNotifications, setUnreadNotifications] = useState(0);
+
+  const markAllAsRead = () => {
+    const updatedNotifications = notificationList.map((notification) => {
+      notification.isRed = true;
+      return notification;
+    });
+    setNotificationList(updatedNotifications);
+    setUnreadNotifications(0);
+  };
+
   return (
     <div className="App">
-      <NotificationsList data={notifications} />
+      <NotificationsList
+        data={notificationList}
+        markAllAsRead={markAllAsRead}
+      />
     </div>
   );
 }
