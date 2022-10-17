@@ -17,6 +17,10 @@ Users should be able to:
 
 ![Project screenshot](./app/public/images/notifications-page-screenshot-fixed.jpg)
 
+### Links
+
+- Live Site URL: [Live Site URL](https://imaginative-phoenix-441cc2.netlify.app/)
+
 ## My process
 
 - I have created a dummy api from which I took data to notifiaction list and single notification component and styled my project to the needs. Implemented some simple logic to mark all notifications as read.
