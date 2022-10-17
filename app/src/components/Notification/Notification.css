@@ -1,0 +1,38 @@
+.notification {
+  display: flex;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.notification.notification__isRed {
+  background-color: var(--light-gray);
+}
+
+.notification__user-image {
+  margin-right: 10px;
+}
+
+.notification__user-image img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.notification__user-name {
+  font-weight: 800;
+}
+
+.notification__notification-text {
+  color: var(--gray);
+}
+
+.notification__associated_type_post {
+  font-weight: 800;
+  color: var(--gray);
+}
+
+.notification__associated_type_group {
+  font-weight: 800;
+  color: var(--blue);
+}
