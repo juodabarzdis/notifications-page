@@ -15,7 +15,7 @@ Users should be able to:
 
 ### Screenshot
 
-![Project screenshot](./app/public/images/notifications-page-screenshot.jpg)
+![Project screenshot](./app/public/images/notifications-page-screenshot-fixed.jpg)
 
 ## My process
 
