@@ -34,7 +34,7 @@ const Notification = ({ data }) => {
 
   return (
     <>
-      <li className={`notification ${isRedStyle()}`}>
+      <li tabindex="0" className={`notification ${isRedStyle()}`}>
         <div className="notification-main">
           <div className="notification__user-image">
             <img src={data.image} alt="avatar" />
